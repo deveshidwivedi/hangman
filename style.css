@@ -1,0 +1,44 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #501b1d;
+
+}
+
+.container{
+    width: 850px;
+    background: white;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    padding: 60px 40px;
+    border-radius: 10px;
+
+}
+.hman-box img{
+   width: 350px;
+}
+
+.heading{
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: left;
+    text-transform: uppercase;
+
+}
+
+.word-display{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.word-display .letter{
+width: 28px;
+margin-bottom: 40px;
+border-bottom: 3px solid black;
+}
