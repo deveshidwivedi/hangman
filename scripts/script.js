@@ -4,17 +4,17 @@ const wordDisplay=document.querySelector(".word-display");
 const guessesText=document.querySelector(".guesses-text b");
 const keyboardDiv=document.querySelector(".keyboard");
 const gameModal= document.querySelector(".game-modal");
-const playAgainBtn= document.querySelector(".playagain");
+const playAgainBtn= gameModal.querySelector("button");
 
 let currentWord, correctLetters, wrongGuessCount;
 const maxGuesses=6;
 const resetGame=()=>{
     correctLetters=[];
     wrongGuessCount=0;
-    hmanImage.src=`images/hangman-${wrongGuessCount}.svg` ;
-    guessesText.innerText=`${wrongGuessCount}/ ${maxGuesses}`;
-    keyboardDiv.querySelectorAll("button").forEach(btn=>button.disabled= false);  
+    hmanImage.src=`images/hangman-0.svg` ;
+    guessesText.innerText=`${wrongGuessCount}/ ${maxGuesses}`;  
     wordDisplay.innerHTML=currentWord.split("").map(()=>`<li class="letter"></li>`).join("");
+    keyboardDiv.querySelectorAll("button").forEach(btn=>button.disabled= false);
     gameModal.classList.remove("show");
 }
 
