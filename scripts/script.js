@@ -1,8 +1,9 @@
 
-const hmanImage=document.querySelector(".hman-box img");
+
 const wordDisplay=document.querySelector(".word-display");
 const guessesText=document.querySelector(".guesses-text b");
 const keyboardDiv=document.querySelector(".keyboard");
+const hmanImage=document.querySelector(".hman-box img");
 const gameModal= document.querySelector(".game-modal");
 const playAgainBtn= gameModal.querySelector("button");
 
@@ -14,7 +15,7 @@ const resetGame=()=>{
     hmanImage.src=`images/hangman-0.svg` ;
     guessesText.innerText=`${wrongGuessCount}/ ${maxGuesses}`;  
     wordDisplay.innerHTML=currentWord.split("").map(()=>`<li class="letter"></li>`).join("");
-    keyboardDiv.querySelectorAll("button").forEach(btn=>button.disabled= false);
+    keyboardDiv.querySelectorAll("button").forEach(btn=>btn.disabled= false);
     gameModal.classList.remove("show");
 }
 
